@@ -15,6 +15,9 @@ block content
     br
     button(type="submit", name="submit", value="file" disabled) Create OneNote Page with an Embedded File
     br
+  form(id="getExamples" name="getExamples", method="get")
+    button(type="submit", name="submit", value="getAllPages" disabled) Get All pages
+    br
   script.
     window.authUrl = '!{authUrl}';
   script(src="/javascripts/index.js")

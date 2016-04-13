@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h1= title
+    a(href='/') Go back
+    br
+    br
+    br
+    a(href='context', target='_onenote') #{context}
+    br
+    a(href='nextLink', target='_onenote') #{nextLink}
+    br
+    ul
+    each val in values
+        li
+            a(href='#{val.contentUrl}') #{val.title}
+            br
+            span id: #{val.id}
+            
+            
+    

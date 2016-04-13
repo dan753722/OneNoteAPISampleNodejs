@@ -74,6 +74,12 @@ function disableCreateButtons(disabled) {
     });
 }
 
+function disableGetButtons(disabled) {
+    $('#getExamples').find('button').each(function () {
+        $(this).attr('disabled', disabled);
+    });
+}
+
 function disableLoginButton(disabled) {
     $loginBtn.attr('disabled', disabled);
 }
@@ -90,6 +96,7 @@ function updateLoginButton(isLoggedIn) {
         }
     });
     disableCreateButtons(!isLoggedIn);
+    disableGetButtons(!isLoggedIn);
 }
 
 function checkLogin() {

@@ -5,6 +5,7 @@ var liveConnect = require('../lib/liveconnect-client');
 
 /* GET Live Connect Auth callback. */
 router.get('/', function (req, res) {
+
     // Get the auth code from the callback url query parameters
     var authCode = req.query['code'];
 
